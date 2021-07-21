@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Book Name*</label><label class="validation-error hide" id="bookValidationError">This field is required.</label>
+                        <input type="text" name="bookName" id="bookName">
+                    </div>
+                    <div>
+                        <label>Book Id</label>
+                        <input type="text" name="bookId" id="bookId">
+                    </div>
+                    <div>
+                        <label>Author</label>
+                        <input type="text" name="author" id="author">
+                    </div>
+                    <div>
+                        <label>Price</label>
+                        <input type="text" name="price" id="price">
+                    </div>
+                    
+                    <div>
+                        <label> Genre</label>
+                        <select name="genre" id="genre">
+                        
+                            <option>All</option>
+                            <option>Frictional</option>
+                            <option>Suspense</option>
+                            <option>Detective</option>
+                            <option>Fantacy</option>
+                            <option>Romance</option>
+                        
+                            </select>
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <input id="searchbar" onkeyup="search_bookname()" type="text"
+            name="search" placeholder="Search name..">
+
+            <td>
+                <table class="list" id="bookList">
+                    <thead>
+                        <tr>
+                            <th>Book Name</th>
+                            <th>Book Id</th>
+                            <th>Author</th>
+                            <th>Price</th>
+                            <th>Genre</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
